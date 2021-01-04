@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/wow.css">
     <link rel="stylesheet" href="css/libs/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Pick One App</title>
 </head>
 
@@ -32,18 +33,20 @@
             <div class="carousel-inner">
                 <div class="carousel-item wow fadeIn white-overlay active" style="background-color: #232937; padding-bottom: 200px;">
     
-
+                    <!--
                      <video width="640" height="480" autoplay loop style="float: right; margin-right: 150px; margin-top:150px">
                          <source src="pickoneapp_intro.mp4" type="video/mp4">
                             <source src="pickoneapp_intro.ogg" type="video/ogg" />
                             Your browser does not support the video tag.
                     </video>
+                    -->
+                    <img src="pickonelogov2.png" width="636" height="676"  style="float: right; margin-right: 150px; margin-top:71px" alt="Italian Trulli">
 
                     <div class="carousel-caption">
-                        <h5><span class="text-tangerine"> PickOne App </span> <span class="text-white"> Make the right choice. </span> </h5>
+                        <h5><span class="text-tangerine">PICKONE APP</span> <span class="text-white"> Make the right choice. </span> </h5>
                         <p class="text-white">Making decisions with friends is difficult. Let us help you and your friends decide your next movie, restaurant, experience and much more!</p>
-                        <input type="image" style="max-width:240px; height:auto; max-height:120px; margin-right: 20px" src="download_on_the_app_store.png" />
-                        <input type="image" style="max-width:270px; height:auto; max-height:120px;" src="get-it-on-google-play-badge.png" />
+                        <input id="ios" type="image" style="max-width:240px; height:auto; max-height:120px; margin-right: 20px" src="download_on_the_app_store.png" />
+                        <input id="android" type="image" style="max-width:270px; height:auto; max-height:120px;" src="get-it-on-google-play-badge.png" />
                     </div>
 
 
@@ -80,6 +83,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/custom.js"></script>
+
+
+    <script>
+  $( function() {
+    $("#ios").click(function(e) {
+        console.log('ios cloicked')
+        e.stopPropagation();
+        return false;
+    });
+  } );
+  </script>
 
 </body>
 
